@@ -88,7 +88,7 @@
       
       <!-- Table of Contents -->
       
-        <h1 id="Sep-17-Question"><a href="#Sep-17-Question" class="headerlink" title="Sep 17 Question"></a>Sep 17 Question</h1><p>提问者： 何迅禹</p>
+        <p>提问者： 何迅禹</p>
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>关于两个功能相同的代码为何运行结果不同。</p>
 <h3 id="代码1"><a href="#代码1" class="headerlink" title="代码1"></a>代码1</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> EPS 1e-7</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">double</span> i, sign = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">double</span> term = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">double</span> sum = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; <span class="built_in">fabs</span>(term) &gt;= EPS; i++)&#123;</span><br><span class="line">        sum = sum + term;</span><br><span class="line">        sign = - sign;</span><br><span class="line">        term = sign / (i * <span class="number">2</span> + <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    sum = sum * <span class="number">4</span>;</span><br><span class="line">    <span class="built_in">printf</span> (<span class="string">"PI=%lf"</span>, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -108,7 +108,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2019/09/17/Sep-17-Question/" data-id="ck0nza0ms00004xc1q95vi6ln" class="article-share-link" data-share="baidu" data-title="Sep 17 Question">Share</a>
+        <a data-url="http://yoursite.com/2019/09/17/Sep-17-Question/" data-id="ck0nzbkln0000wmc1oq4b5xtf" class="article-share-link" data-share="baidu" data-title="Sep 17 Question">Share</a>
       
 
       
