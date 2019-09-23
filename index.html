@@ -86,19 +86,79 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+      <!-- Table of Contents -->
+      
         <h1 id="常见错误总结"><a href="#常见错误总结" class="headerlink" title="常见错误总结"></a>常见错误总结</h1><ol start="0">
-<li>叫我“小黄师兄”，求求你们别叫我老师了。（我也想当老师呀……但我太菜了啊……qwq）</li>
+<li><p>叫我“小黄师兄”，求求你们别叫我老师了。（我也想当老师呀……但我太菜了啊……qwq）</p>
+</li>
+<li><p>关于main之后一定一定一定要加小括号。我也知道里面啥也没有的说。（无奈脸）</p>
+</li>
+<li><p>关于<code>if</code>的使用方法</p>
+<p><code>if</code>的正确使用姿势是这样的：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (expr)&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>expr</code> 为条件判断语句，比如<code>a&gt;=b</code>之类的。</p>
+<p>关于与或非的正确使用姿势是：<code>&amp;&amp;</code>，<code>||</code>，<code>！</code> 不是 and or 什么的。</p>
+</li>
+<li><p>关于<code>double</code>的类型问题</p>
+<p>类型使用的对应问题：</p>
+<table>
+<thead>
+<tr>
+<th>Type Name</th>
+<th align="right">Format information</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int</td>
+<td align="right">%d</td>
+</tr>
+<tr>
+<td>float</td>
+<td align="right">%f</td>
+</tr>
+<tr>
+<td>double</td>
+<td align="right">%lf</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>关于终止程序</p>
+<p>直接<code>return 0;</code>就OK了啊，没有那么复杂啊。</p>
+</li>
+<li><p>关于中文字符，大家打程序注意一点，不要输入中文的分号或者括号。</p>
+</li>
+<li><p><strong>重点</strong>：<code>scanf</code>的使用</p>
+<p><code>scanf</code>的使用请大家认真查阅课本，这类<strong>格式规定型输入输出</strong>你们怎么定就要怎么输入。（自己埋的雷要自己踩）</p>
+<p>下面的例子大家下次上机或者有空都可以试验一下。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">scanf</span> (<span class="string">"%d%d"</span>,&amp;a,&amp;b);</span><br></pre></td></tr></table></figure>
+
+<p>输入两个数字，中间用<strong>间隔符</strong>（<code>tab</code>，回车，空格）隔开都可以正常读入。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">scanf</span> (<span class="string">"%d,%d"</span>,&amp;a,&amp;b);</span><br></pre></td></tr></table></figure>
+
+<p>输入两个数字，中间<strong>用有且仅有一个逗号</strong>隔开才可以正常读入。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">scanf</span> (<span class="string">"a=%d, b=%d"</span>,&amp;a,&amp;b);</span><br></pre></td></tr></table></figure>
+
+<p>恭喜你，这个自己做的死，怎么也要自己受呀</p>
+<p>仅有按如下格式：</p>
+<p>a=数字, b=数字</p>
+<p>b和上一个数字之前有且仅有两个字符，一个英文逗号，一个空格。</p>
+<p>只有这样才能正常的读入数据。</p>
+<h1 id="参考程序"><a href="#参考程序" class="headerlink" title="参考程序"></a>参考程序</h1><p>鉴于有同学还没有交，我周四再更新这部分</p>
+<h1 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h1><p>今天看到很多同学上机前用纸笔写下代码，很认真值得表扬。</p>
+<p>吐槽1：你们这届游戏能力好菜啊，三维弹球这种分都打不到八位数。而且居然没什么人玩扫雷，差评。</p>
+<p>吐槽2：有位同学很有意思啊，一直琢磨怎么<code>printf</code>打爱心。想和女同学表白的话小黄师兄借你点东西：</p>
+<p><img src="https://s2.ax1x.com/2019/09/23/uFNZ6A.png" alt></p>
+<p><img src="https://s2.ax1x.com/2019/09/23/uFNVld.png" alt></p>
+<p>吐槽3：我好惨啊，无聊的时候慢慢调参调出来的东西自己还没有用上就送给学弟学妹了。</p>
+</li>
 </ol>
-        
-          <p class="article-more-link">
-            <a href="/2019/09/23/Sep-23-上机实验总结/#more">Read More</a>
-          </p>
-        
+
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2019/09/23/Sep-23-上机实验总结/" data-id="ck0wk799k0001ddc11snxsljh" class="article-share-link" data-share="baidu" data-title="Sep 23 上机实验总结">Share</a>
+        <a data-url="http://yoursite.com/2019/09/23/Sep-23-上机实验总结/" data-id="ck0wkb7360001epc1lxiedvfv" class="article-share-link" data-share="baidu" data-title="Sep 23 上机实验总结">Share</a>
       
 
       
@@ -135,18 +195,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+      <!-- Table of Contents -->
+      
         <p>提问者： 何迅禹</p>
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>关于两个功能相同的代码为何运行结果不同。</p>
-        
-          <p class="article-more-link">
-            <a href="/2019/09/17/Sep-17-Question/#more">Read More</a>
-          </p>
-        
+<h3 id="代码1"><a href="#代码1" class="headerlink" title="代码1"></a>代码1</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> EPS 1e-7</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">double</span> i, sign = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">double</span> term = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">double</span> sum = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; <span class="built_in">fabs</span>(term) &gt;= EPS; i++)&#123;</span><br><span class="line">        sum = sum + term;</span><br><span class="line">        sign = - sign;</span><br><span class="line">        term = sign / (i * <span class="number">2</span> + <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    sum = sum * <span class="number">4</span>;</span><br><span class="line">    <span class="built_in">printf</span> (<span class="string">"PI=%lf"</span>, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果为：</p>
+<p>PI=3.141592</p>
+<h3 id="代码2"><a href="#代码2" class="headerlink" title="代码2"></a>代码2</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> EPS 1e-7</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">double</span> i, sign = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">double</span> term = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">double</span> sum = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; <span class="built_in">fabs</span>(term) &gt;= EPS; i+=<span class="number">2</span>)&#123;</span><br><span class="line">        sum = sum + term;</span><br><span class="line">        sign = - sign;</span><br><span class="line">        term = sign / i;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    sum = sum * <span class="number">4</span>;</span><br><span class="line">    <span class="built_in">printf</span> (<span class="string">"PI=%lf"</span>, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果为：</p>
+<p>PI=0.858408</p>
+<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><p>没有注意<code>for</code>循环的范围，两个<code>for</code>循环的范围其实是不同的，前一段代码sign的除数从3开始而后一段代码从1开始。</p>
+<h2 id="小黄学长的建议"><a href="#小黄学长的建议" class="headerlink" title="小黄学长的建议"></a>小黄学长的建议</h2><p>以后遇到类似的问题，建议每次循环输出对应的变量</p>
+<p>同时未来安全和一些其他问题，不建议讲循环变量写成<code>double</code>类型，也不建议对<code>double</code>类型变量进行<code>++</code>操作。</p>
+<h2 id="推荐的最终代码"><a href="#推荐的最终代码" class="headerlink" title="推荐的最终代码"></a>推荐的最终代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> EPS 1e-7</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, sign = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">double</span> term = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">double</span> sum = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; <span class="built_in">fabs</span>(term) &gt;= EPS; i++)&#123;</span><br><span class="line">        sum = sum + term;</span><br><span class="line">        sign = - sign;</span><br><span class="line">        term = sign / (i * <span class="number">2.0</span> + <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    sum = sum * <span class="number">4</span>;</span><br><span class="line">    <span class="built_in">printf</span> (<span class="string">"PI=%lf"</span>, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2019/09/17/Sep-17-Question/" data-id="ck0wk799h0000ddc1f7toqtg2" class="article-share-link" data-share="baidu" data-title="Sep 17 Question">Share</a>
+        <a data-url="http://yoursite.com/2019/09/17/Sep-17-Question/" data-id="ck0wkb72w0000epc1w1khupu4" class="article-share-link" data-share="baidu" data-title="Sep 17 Question">Share</a>
       
 
       
