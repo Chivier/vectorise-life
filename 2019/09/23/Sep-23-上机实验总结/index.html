@@ -16,7 +16,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://s2.ax1x.com/2019/09/23/uFNZ6A.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/09/23/uFNVld.png">
-<meta property="og:updated_time" content="2019-09-23T15:28:49.948Z">
+<meta property="og:updated_time" content="2019-09-26T12:54:17.460Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sep 23 上机实验总结">
 <meta name="twitter:description" content="常见错误总结 叫我“小黄师兄”，求求你们别叫我老师了。（我也想当老师呀……但我太菜了啊……qwq）  关于main之后一定一定一定要加小括号。我也知道里面啥也没有的说。（无奈脸）  关于if的使用方法 if的正确使用姿势是这样的： 123456if (expr)&amp;#123;    ...&amp;#125;else &amp;#123;    ...&amp;#125;  expr 为条件判断语句，比如a&amp;gt;=b之类">
@@ -150,21 +150,38 @@
 <p>a=数字, b=数字</p>
 <p>b和上一个数字之前有且仅有两个字符，一个英文逗号，一个空格。</p>
 <p>只有这样才能正常的读入数据。</p>
-<h1 id="参考程序"><a href="#参考程序" class="headerlink" title="参考程序"></a>参考程序</h1><p>鉴于有同学还没有交，我周四再更新这部分</p>
-<h1 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h1><p>今天看到很多同学上机前用纸笔写下代码，很认真值得表扬。</p>
-<p>吐槽1：你们这届游戏能力好菜啊，三维弹球这种分都打不到八位数。而且居然没什么人玩扫雷，差评。</p>
-<p>吐槽2：有位同学很有意思啊，一直琢磨怎么<code>printf</code>打爱心。想和女同学表白的话小黄师兄借你点东西：</p>
-<p><img src="https://s2.ax1x.com/2019/09/23/uFNZ6A.png" alt></p>
-<p><img src="https://s2.ax1x.com/2019/09/23/uFNVld.png" alt></p>
-<p>吐槽3：我好惨啊，无聊的时候慢慢调参调出来的东西自己还没有用上就送给学弟学妹了。</p>
+<h1 id="参考程序"><a href="#参考程序" class="headerlink" title="参考程序"></a>参考程序</h1><p>T1:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line">   </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">21</span>; ++i)</span><br><span class="line">           <span class="built_in">putchar</span>(<span class="string">'*'</span>);</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"\n      Very Good!"</span>);</span><br><span class="line">       <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">21</span>; ++i)</span><br><span class="line">        <span class="built_in">putchar</span>(<span class="string">'*'</span>);</span><br><span class="line">       <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
 </li>
 </ol>
+<p>   T2:</p>
+   <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PI acos(0) * 2</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">float</span> R, H;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"Input Radius:"</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%f"</span>, &amp;R);</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"Input Height:"</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%f"</span>, &amp;H);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Volumn = %lf\n"</span>, PI * R * R * H);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>   T3:</p>
+   <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">float</span> t;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%f"</span>, &amp;t);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%f\n"</span>, <span class="number">5.0</span> / <span class="number">9</span> * (t - <span class="number">32</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>   T4:</p>
+   <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">float</span> a, b, c;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%f%f%f"</span>, &amp;a, &amp;b, &amp;c);</span><br><span class="line">    <span class="keyword">float</span> p = <span class="number">0.5</span> * (a + b + c);</span><br><span class="line">    <span class="keyword">if</span> (a + b &gt; c &amp;&amp; a + c &gt; b &amp;&amp; b + c &gt; a)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%f\n"</span>, sqrtf(p * (p - a) * (p - b) * (p - c)));</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">"Error"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h1 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h1><p>   今天看到很多同学上机前用纸笔写下代码，很认真值得表扬。</p>
+<p>   吐槽1：你们这届游戏能力好菜啊，三维弹球这种分都打不到八位数。而且居然没什么人玩扫雷，差评。</p>
+<p>   吐槽2：有位同学很有意思啊，一直琢磨怎么<code>printf</code>打爱心。想和女同学表白的话小黄师兄借你点东西：</p>
+<p>   <img src="https://s2.ax1x.com/2019/09/23/uFNZ6A.png" alt></p>
+<p>   <img src="https://s2.ax1x.com/2019/09/23/uFNVld.png" alt></p>
+<p>   吐槽3：我好惨啊，无聊的时候慢慢调参调出来的东西自己还没有用上就送给学弟学妹了。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2019/09/23/Sep-23-上机实验总结/" data-id="ck0wki9yl0001udc19clkbn4y" class="article-share-link" data-share="baidu" data-title="Sep 23 上机实验总结">Share</a>
+        <a data-url="http://yoursite.com/2019/09/23/Sep-23-上机实验总结/" data-id="ck10p907l0001grc1aphclk96" class="article-share-link" data-share="baidu" data-title="Sep 23 上机实验总结">Share</a>
       
 
       
