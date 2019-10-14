@@ -64,6 +64,66 @@
     <div class="outer">
       <section id="main">
   
+    <article id="post-Oct-14-上机实验总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/14/Oct-14-上机实验总结/" class="article-date">
+  <time datetime="2019-10-14T08:29:16.000Z" itemprop="datePublished">2019-10-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/14/Oct-14-上机实验总结/">Oct 14 上机实验总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      <!-- Table of Contents -->
+      
+        <h1 id="常见错误总结"><a href="#常见错误总结" class="headerlink" title="常见错误总结"></a>常见错误总结</h1><p>由于这次的实验是以验证性的任务为主，所以问题也不是很大。但是细节上还是有很多需要注意的地方。</p>
+<ol>
+<li><p>运算的优先级问题。许多同学（超过 5 人）弄不清<code>||</code>和<code>&amp;&amp;</code>的优先级。</p>
+</li>
+<li><p>关于编程细节问题，有一个任务是求一个分式的数值。求解分式的时候，自然需要考虑是不是分母为 0。</p>
+</li>
+<li><p>关于短路问题。</p>
+<p>这次我这一组的同学我基本上都考了一个额外的问题：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">3</span>;</span><br><span class="line">b = <span class="number">4</span>;</span><br><span class="line">c = <span class="number">5</span>;</span><br><span class="line">x = y = <span class="number">1</span>;</span><br><span class="line">c = !(x = a) &amp;&amp; (y = b) &amp;&amp; <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
+<p>执行完之后 x，y 的值分别为多少。</p>
+<p>这个问题约有 2%的同学清楚短路性质，30%的同学上课认真听讲，也可以独立思考完成。（20%的同学借助其他同学的帮助，透彻理解了）</p>
+<p><code>&amp;&amp;</code>，<code>||</code>这类逻辑运算符有这样的特性，如果<code>&amp;&amp;</code>左部为 0，则右部会不做处理，直接无视，该部分式子值为 0。<code>||</code>同理。</p>
+<p>也就是说，实际上，我们的程序只执行了<code>!(x=a)</code>这一部分。</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://yoursite.com/2019/10/14/Oct-14-上机实验总结/" data-id="ck1q61clp0001lyc1xq8qyyj2" class="article-share-link" data-share="baidu" data-title="Oct 14 上机实验总结">Share</a>
+      
+
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Lab/">Lab</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Oct-1-Question" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/10/02/Oct-1-Question/" class="article-date">
@@ -98,7 +158,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2019/10/02/Oct-1-Question/" data-id="ck1kfdjud0000e1c1ihdoeqc5" class="article-share-link" data-share="baidu" data-title="Oct 1 Question">Share</a>
+        <a data-url="http://yoursite.com/2019/10/02/Oct-1-Question/" data-id="ck1q61clu0003lyc1qomy7xth" class="article-share-link" data-share="baidu" data-title="Oct 1 Question">Share</a>
       
 
       
@@ -140,7 +200,7 @@
         <h1 id="常见错误总结"><a href="#常见错误总结" class="headerlink" title="常见错误总结"></a>常见错误总结</h1><ol start="0">
 <li><p>叫我“小黄师兄”，求求你们别叫我老师了。（我也想当老师呀……但我太菜了啊……qwq）</p>
 </li>
-<li><p>关于main之后一定一定一定要加小括号。我也知道里面啥也没有的说。（无奈脸）</p>
+<li><p>关于 main 之后一定一定一定要加小括号。我也知道里面啥也没有的说。（无奈脸）</p>
 </li>
 <li><p>关于<code>if</code>的使用方法</p>
 <p><code>if</code>的正确使用姿势是这样的：</p>
@@ -173,7 +233,7 @@
 </tbody></table>
 </li>
 <li><p>关于终止程序</p>
-<p>直接<code>return 0;</code>就OK了啊，没有那么复杂啊。</p>
+<p>直接<code>return 0;</code>就 OK 了啊，没有那么复杂啊。</p>
 </li>
 <li><p>关于中文字符，大家打程序注意一点，不要输入中文的分号或者括号。</p>
 </li>
@@ -191,46 +251,40 @@
 <p>恭喜你，这个自己做的死，怎么也要自己受呀</p>
 <p>仅有按如下格式：</p>
 <p>a=数字, b=数字</p>
-<p>b和上一个数字之前有且仅有两个字符，一个英文逗号，一个空格。</p>
+<p>b 和上一个数字之前有且仅有两个字符，一个英文逗号，一个空格。</p>
 <p>只有这样才能正常的读入数据。</p>
 <h1 id="参考程序"><a href="#参考程序" class="headerlink" title="参考程序"></a>参考程序</h1><p>T1:</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line">   </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">21</span>; ++i)</span><br><span class="line">           <span class="built_in">putchar</span>(<span class="string">'*'</span>);</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"\n      Very Good!"</span>);</span><br><span class="line">       <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">21</span>; ++i)</span><br><span class="line">        <span class="built_in">putchar</span>(<span class="string">'*'</span>);</span><br><span class="line">       <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
-<p>   T2:</p>
-   <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PI acos(0) * 2</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">float</span> R, H;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"Input Radius:"</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%f"</span>, &amp;R);</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"Input Height:"</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%f"</span>, &amp;H);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Volumn = %lf\n"</span>, PI * R * R * H);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>int main() {<br>int i;<br>for (i = 0; i &lt; 21; ++i)<br>putchar(‘<em>‘);<br>puts(“\n Very Good!”);<br>for (i = 0; i &lt; 21; ++i)<br>putchar(‘</em>‘);<br>return 0;<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">T2:</span><br><span class="line"></span><br><span class="line">```c</span><br><span class="line">#include &lt;math.h&gt;</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">#define PI acos(0) * 2</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    float R, H;</span><br><span class="line">    puts(&quot;Input Radius:&quot;);</span><br><span class="line">    scanf(&quot;%f&quot;, &amp;R);</span><br><span class="line">    puts(&quot;Input Height:&quot;);</span><br><span class="line">    scanf(&quot;%f&quot;, &amp;H);</span><br><span class="line">    printf(&quot;Volumn = %lf\n&quot;, PI * R * R * H);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>T3:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">float</span> t;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%f"</span>, &amp;t);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%f\n"</span>, <span class="number">5.0</span> / <span class="number">9</span> * (t - <span class="number">32</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>   T3:</p>
-   <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">float</span> t;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%f"</span>, &amp;t);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%f\n"</span>, <span class="number">5.0</span> / <span class="number">9</span> * (t - <span class="number">32</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>T4:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">float</span> a, b, c;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%f%f%f"</span>, &amp;a, &amp;b, &amp;c);</span><br><span class="line">    <span class="keyword">float</span> p = <span class="number">0.5</span> * (a + b + c);</span><br><span class="line">    <span class="keyword">if</span> (a + b &gt; c &amp;&amp; a + c &gt; b &amp;&amp; b + c &gt; a)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%f\n"</span>, sqrtf(p * (p - a) * (p - b) * (p - c)));</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">"Error"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-<p>   T4:</p>
-   <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">float</span> a, b, c;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%f%f%f"</span>, &amp;a, &amp;b, &amp;c);</span><br><span class="line">    <span class="keyword">float</span> p = <span class="number">0.5</span> * (a + b + c);</span><br><span class="line">    <span class="keyword">if</span> (a + b &gt; c &amp;&amp; a + c &gt; b &amp;&amp; b + c &gt; a)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%f\n"</span>, sqrtf(p * (p - a) * (p - b) * (p - c)));</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">"Error"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-<h1 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h1><p>   今天看到很多同学上机前用纸笔写下代码，很认真值得表扬。</p>
-<p>   吐槽1：你们这届游戏能力好菜啊，三维弹球这种分都打不到八位数。而且居然没什么人玩扫雷，差评。</p>
-<p>   吐槽2：有位同学很有意思啊，一直琢磨怎么<code>printf</code>打爱心。想和女同学表白的话小黄师兄借你点东西：</p>
-<p>   <img src="https://s2.ax1x.com/2019/09/23/uFNZ6A.png" alt></p>
-<p>   <img src="https://s2.ax1x.com/2019/09/23/uFNVld.png" alt></p>
-<p>   吐槽3：我好惨啊，无聊的时候慢慢调参调出来的东西自己还没有用上就送给学弟学妹了。</p>
+<h1 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h1><p>今天看到很多同学上机前用纸笔写下代码，很认真值得表扬。</p>
+<p>吐槽 1：你们这届游戏能力好菜啊，三维弹球这种分都打不到八位数。而且居然没什么人玩扫雷，差评。</p>
+<p>吐槽 2：有位同学很有意思啊，一直琢磨怎么<code>printf</code>打爱心。想和女同学表白的话小黄师兄借你点东西：</p>
+<p><img src="https://s2.ax1x.com/2019/09/23/uFNZ6A.png" alt></p>
+<p><img src="https://s2.ax1x.com/2019/09/23/uFNVld.png" alt></p>
+<p>吐槽 3：我好惨啊，无聊的时候慢慢调参调出来的东西自己还没有用上就送给学弟学妹了。</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2019/09/23/Sep-23-上机实验总结/" data-id="ck1kfdjup0003e1c155ifwqkq" class="article-share-link" data-share="baidu" data-title="Sep 23 上机实验总结">Share</a>
+        <a data-url="http://yoursite.com/2019/09/23/Sep-23-上机实验总结/" data-id="ck1q61clj0000lyc1wf6r4n1c" class="article-share-link" data-share="baidu" data-title="Sep 23 上机实验总结">Share</a>
       
 
       
 
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Lab1/">Lab1</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Lab/">Lab</a></li></ul>
 
     </footer>
   </div>
@@ -283,7 +337,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2019/09/17/Sep-17-Question/" data-id="ck1kfdjuk0001e1c1npmytd3m" class="article-share-link" data-share="baidu" data-title="Sep 17 Question">Share</a>
+        <a data-url="http://yoursite.com/2019/09/17/Sep-17-Question/" data-id="ck1q61clv0004lyc1504c24ej" class="article-share-link" data-share="baidu" data-title="Sep 17 Question">Share</a>
       
 
       
@@ -309,7 +363,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/For-loop/">For-loop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lab1/">Lab1</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sizeof-date-type/">sizeof date type</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/For-loop/">For-loop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lab/">Lab</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sizeof-date-type/">sizeof date type</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -318,7 +372,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -328,6 +382,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/10/14/Oct-14-上机实验总结/">Oct 14 上机实验总结</a>
+          </li>
         
           <li>
             <a href="/2019/10/02/Oct-1-Question/">Oct 1 Question</a>
