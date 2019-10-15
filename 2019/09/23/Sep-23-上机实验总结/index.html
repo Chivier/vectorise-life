@@ -6,20 +6,20 @@
   
   <title>Sep 23 上机实验总结 | 程序设计 Q&amp;A</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="常见错误总结 叫我“小黄师兄”，求求你们别叫我老师了。（我也想当老师呀……但我太菜了啊……qwq）  关于 main 之后一定一定一定要加小括号。我也知道里面啥也没有的说。（无奈脸）  关于if的使用方法 if的正确使用姿势是这样的： 123456if (expr)&amp;#123;    ...&amp;#125;else &amp;#123;    ...&amp;#125;  expr 为条件判断语句，比如a&amp;gt;=b">
+  <meta name="description" content="常见错误总结 叫我“小黄师兄”，求求你们别叫我老师了。（我也想当老师呀……但我太菜了啊……qwq）  关于 main 之后一定一定一定要加小括号。我也知道里面啥也没有的说。（无奈脸）  关于if的使用方法 if的正确使用姿势是这样的： 123456if (expr)&amp;#123;    ...&amp;#125;else &amp;#123;    ...&amp;#125;  expr 为条件判断语句，比如a&amp;gt">
 <meta name="keywords" content="Lab">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sep 23 上机实验总结">
 <meta property="og:url" content="https://chivier.github.io/c-programming-ta-qa-web/2019/09/23/Sep-23-上机实验总结/index.html">
 <meta property="og:site_name" content="程序设计 Q&amp;A">
-<meta property="og:description" content="常见错误总结 叫我“小黄师兄”，求求你们别叫我老师了。（我也想当老师呀……但我太菜了啊……qwq）  关于 main 之后一定一定一定要加小括号。我也知道里面啥也没有的说。（无奈脸）  关于if的使用方法 if的正确使用姿势是这样的： 123456if (expr)&amp;#123;    ...&amp;#125;else &amp;#123;    ...&amp;#125;  expr 为条件判断语句，比如a&amp;gt;=b">
+<meta property="og:description" content="常见错误总结 叫我“小黄师兄”，求求你们别叫我老师了。（我也想当老师呀……但我太菜了啊……qwq）  关于 main 之后一定一定一定要加小括号。我也知道里面啥也没有的说。（无奈脸）  关于if的使用方法 if的正确使用姿势是这样的： 123456if (expr)&amp;#123;    ...&amp;#125;else &amp;#123;    ...&amp;#125;  expr 为条件判断语句，比如a&amp;gt">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://s2.ax1x.com/2019/09/23/uFNZ6A.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/09/23/uFNVld.png">
-<meta property="og:updated_time" content="2019-10-14T08:29:28.692Z">
+<meta property="og:updated_time" content="2019-10-15T08:15:34.884Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sep 23 上机实验总结">
-<meta name="twitter:description" content="常见错误总结 叫我“小黄师兄”，求求你们别叫我老师了。（我也想当老师呀……但我太菜了啊……qwq）  关于 main 之后一定一定一定要加小括号。我也知道里面啥也没有的说。（无奈脸）  关于if的使用方法 if的正确使用姿势是这样的： 123456if (expr)&amp;#123;    ...&amp;#125;else &amp;#123;    ...&amp;#125;  expr 为条件判断语句，比如a&amp;gt;=b">
+<meta name="twitter:description" content="常见错误总结 叫我“小黄师兄”，求求你们别叫我老师了。（我也想当老师呀……但我太菜了啊……qwq）  关于 main 之后一定一定一定要加小括号。我也知道里面啥也没有的说。（无奈脸）  关于if的使用方法 if的正确使用姿势是这样的： 123456if (expr)&amp;#123;    ...&amp;#125;else &amp;#123;    ...&amp;#125;  expr 为条件判断语句，比如a&amp;gt">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/09/23/uFNZ6A.png">
   
     <link rel="alternative" href="https://github.com/Chivier" title="程序设计 Q&amp;A" type="application/atom+xml">
@@ -94,7 +94,9 @@
       
       <!-- Table of Contents -->
       
-        <h1 id="常见错误总结"><a href="#常见错误总结" class="headerlink" title="常见错误总结"></a>常见错误总结</h1><ol start="0">
+         <a id="more"></a>
+
+<h1 id="常见错误总结"><a href="#常见错误总结" class="headerlink" title="常见错误总结"></a>常见错误总结</h1><ol start="0">
 <li><p>叫我“小黄师兄”，求求你们别叫我老师了。（我也想当老师呀……但我太菜了啊……qwq）</p>
 </li>
 <li><p>关于 main 之后一定一定一定要加小括号。我也知道里面啥也没有的说。（无奈脸）</p>
@@ -156,7 +158,7 @@
 </li>
 </ol>
 <p>int main() {<br>int i;<br>for (i = 0; i &lt; 21; ++i)<br>putchar(‘<em>‘);<br>puts(“\n Very Good!”);<br>for (i = 0; i &lt; 21; ++i)<br>putchar(‘</em>‘);<br>return 0;<br>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">T2:</span><br><span class="line"></span><br><span class="line">```c</span><br><span class="line">#include &lt;math.h&gt;</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">#define PI acos(0) * 2</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    float R, H;</span><br><span class="line">    puts(&quot;Input Radius:&quot;);</span><br><span class="line">    scanf(&quot;%f&quot;, &amp;R);</span><br><span class="line">    puts(&quot;Input Height:&quot;);</span><br><span class="line">    scanf(&quot;%f&quot;, &amp;H);</span><br><span class="line">    printf(&quot;Volumn = %lf\n&quot;, PI * R * R * H);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">T2:</span><br><span class="line"></span><br><span class="line">​```c</span><br><span class="line">#include &lt;math.h&gt;</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">#define PI acos(0) * 2</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    float R, H;</span><br><span class="line">    puts(&quot;Input Radius:&quot;);</span><br><span class="line">    scanf(&quot;%f&quot;, &amp;R);</span><br><span class="line">    puts(&quot;Input Height:&quot;);</span><br><span class="line">    scanf(&quot;%f&quot;, &amp;H);</span><br><span class="line">    printf(&quot;Volumn = %lf\n&quot;, PI * R * R * H);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>T3:</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">float</span> t;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%f"</span>, &amp;t);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%f\n"</span>, <span class="number">5.0</span> / <span class="number">9</span> * (t - <span class="number">32</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -175,7 +177,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/09/23/Sep-23-上机实验总结/" data-id="ck1rkku3j0003dbc1nhe7mie4" class="article-share-link" data-share="baidu" data-title="Sep 23 上机实验总结">Share</a>
+        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/09/23/Sep-23-上机实验总结/" data-id="ck1rknj720004u1c1zawrbv63" class="article-share-link" data-share="baidu" data-title="Sep 23 上机实验总结">Share</a>
       
 
       

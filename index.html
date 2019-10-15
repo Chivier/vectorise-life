@@ -88,7 +88,9 @@
       
       <!-- Table of Contents -->
       
-        <h1 id="常见错误总结"><a href="#常见错误总结" class="headerlink" title="常见错误总结"></a>常见错误总结</h1><p>由于这次的实验是以验证性的任务为主，所以问题也不是很大。但是细节上还是有很多需要注意的地方。</p>
+         <a id="more"></a>
+
+<h1 id="常见错误总结"><a href="#常见错误总结" class="headerlink" title="常见错误总结"></a>常见错误总结</h1><p>由于这次的实验是以验证性的任务为主，所以问题也不是很大。但是细节上还是有很多需要注意的地方。</p>
 <ol>
 <li><p>运算的优先级问题。许多同学（超过 5 人）弄不清<code>||</code>和<code>&amp;&amp;</code>的优先级。</p>
 </li>
@@ -113,7 +115,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/10/14/Oct-14-上机实验总结/" data-id="ck1rkku3k0004dbc13lk08bfa" class="article-share-link" data-share="baidu" data-title="Oct 14 上机实验总结">Share</a>
+        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/10/14/Oct-14-上机实验总结/" data-id="ck1rknj6w0001u1c1w0ymjf72" class="article-share-link" data-share="baidu" data-title="Oct 14 上机实验总结">Share</a>
       
 
       
@@ -150,19 +152,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-      <!-- Table of Contents -->
-      
         <p>提问者：被我忘记的某位同学</p>
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>char c ;</p>
-<p>short b;</p>
-<p>sizeof(b+c) 为什么是 4</p>
-<h1 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h1><p>由于C语言设计的问题，一般我们对于变量类型的强制类型转换的时候我们会将低级的类型强制转换成高级的类型。但是对于进行运算的类型，C语言有这样一个特殊机制：int类型之下的类型不属于可计算类型，涉及算术运算的时候，会优先转换为int类型，再去进行计算。</p>
-
+        
+          <p class="article-more-link">
+            <a href="/c-programming-ta-qa-web/2019/10/02/Oct-1-Question/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/10/02/Oct-1-Question/" data-id="ck1rkku390000dbc1w7b7yxwf" class="article-share-link" data-share="baidu" data-title="Oct 1 Question">Share</a>
+        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/10/02/Oct-1-Question/" data-id="ck1rknj6r0000u1c1e8f36985" class="article-share-link" data-share="baidu" data-title="Oct 1 Question">Share</a>
       
 
       
@@ -201,7 +201,9 @@
       
       <!-- Table of Contents -->
       
-        <h1 id="常见错误总结"><a href="#常见错误总结" class="headerlink" title="常见错误总结"></a>常见错误总结</h1><ol start="0">
+         <a id="more"></a>
+
+<h1 id="常见错误总结"><a href="#常见错误总结" class="headerlink" title="常见错误总结"></a>常见错误总结</h1><ol start="0">
 <li><p>叫我“小黄师兄”，求求你们别叫我老师了。（我也想当老师呀……但我太菜了啊……qwq）</p>
 </li>
 <li><p>关于 main 之后一定一定一定要加小括号。我也知道里面啥也没有的说。（无奈脸）</p>
@@ -263,7 +265,7 @@
 </li>
 </ol>
 <p>int main() {<br>int i;<br>for (i = 0; i &lt; 21; ++i)<br>putchar(‘<em>‘);<br>puts(“\n Very Good!”);<br>for (i = 0; i &lt; 21; ++i)<br>putchar(‘</em>‘);<br>return 0;<br>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">T2:</span><br><span class="line"></span><br><span class="line">```c</span><br><span class="line">#include &lt;math.h&gt;</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">#define PI acos(0) * 2</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    float R, H;</span><br><span class="line">    puts(&quot;Input Radius:&quot;);</span><br><span class="line">    scanf(&quot;%f&quot;, &amp;R);</span><br><span class="line">    puts(&quot;Input Height:&quot;);</span><br><span class="line">    scanf(&quot;%f&quot;, &amp;H);</span><br><span class="line">    printf(&quot;Volumn = %lf\n&quot;, PI * R * R * H);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">T2:</span><br><span class="line"></span><br><span class="line">​```c</span><br><span class="line">#include &lt;math.h&gt;</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">#define PI acos(0) * 2</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    float R, H;</span><br><span class="line">    puts(&quot;Input Radius:&quot;);</span><br><span class="line">    scanf(&quot;%f&quot;, &amp;R);</span><br><span class="line">    puts(&quot;Input Height:&quot;);</span><br><span class="line">    scanf(&quot;%f&quot;, &amp;H);</span><br><span class="line">    printf(&quot;Volumn = %lf\n&quot;, PI * R * R * H);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>T3:</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">float</span> t;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%f"</span>, &amp;t);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%f\n"</span>, <span class="number">5.0</span> / <span class="number">9</span> * (t - <span class="number">32</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -282,7 +284,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/09/23/Sep-23-上机实验总结/" data-id="ck1rkku3j0003dbc1nhe7mie4" class="article-share-link" data-share="baidu" data-title="Sep 23 上机实验总结">Share</a>
+        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/09/23/Sep-23-上机实验总结/" data-id="ck1rknj720004u1c1zawrbv63" class="article-share-link" data-share="baidu" data-title="Sep 23 上机实验总结">Share</a>
       
 
       
@@ -319,29 +321,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-      <!-- Table of Contents -->
-      
         <p>提问者： 何迅禹</p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>关于两个功能相同的代码为何运行结果不同。</p>
-<h3 id="代码1"><a href="#代码1" class="headerlink" title="代码1"></a>代码1</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> EPS 1e-7</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">double</span> i, sign = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">double</span> term = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">double</span> sum = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; <span class="built_in">fabs</span>(term) &gt;= EPS; i++)&#123;</span><br><span class="line">        sum = sum + term;</span><br><span class="line">        sign = - sign;</span><br><span class="line">        term = sign / (i * <span class="number">2</span> + <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    sum = sum * <span class="number">4</span>;</span><br><span class="line">    <span class="built_in">printf</span> (<span class="string">"PI=%lf"</span>, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>结果为：</p>
-<p>PI=3.141592</p>
-<h3 id="代码2"><a href="#代码2" class="headerlink" title="代码2"></a>代码2</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> EPS 1e-7</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">double</span> i, sign = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">double</span> term = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">double</span> sum = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; <span class="built_in">fabs</span>(term) &gt;= EPS; i+=<span class="number">2</span>)&#123;</span><br><span class="line">        sum = sum + term;</span><br><span class="line">        sign = - sign;</span><br><span class="line">        term = sign / i;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    sum = sum * <span class="number">4</span>;</span><br><span class="line">    <span class="built_in">printf</span> (<span class="string">"PI=%lf"</span>, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>结果为：</p>
-<p>PI=0.858408</p>
-<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><p>没有注意<code>for</code>循环的范围，两个<code>for</code>循环的范围其实是不同的，前一段代码sign的除数从3开始而后一段代码从1开始。</p>
-<h2 id="小黄学长的建议"><a href="#小黄学长的建议" class="headerlink" title="小黄学长的建议"></a>小黄学长的建议</h2><p>以后遇到类似的问题，建议每次循环输出对应的变量</p>
-<p>同时未来安全和一些其他问题，不建议讲循环变量写成<code>double</code>类型，也不建议对<code>double</code>类型变量进行<code>++</code>操作。</p>
-<h2 id="推荐的最终代码"><a href="#推荐的最终代码" class="headerlink" title="推荐的最终代码"></a>推荐的最终代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> EPS 1e-7</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, sign = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">double</span> term = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">double</span> sum = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; <span class="built_in">fabs</span>(term) &gt;= EPS; i++)&#123;</span><br><span class="line">        sum = sum + term;</span><br><span class="line">        sign = - sign;</span><br><span class="line">        term = sign / (i * <span class="number">2.0</span> + <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    sum = sum * <span class="number">4</span>;</span><br><span class="line">    <span class="built_in">printf</span> (<span class="string">"PI=%lf"</span>, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+        
+          <p class="article-more-link">
+            <a href="/c-programming-ta-qa-web/2019/09/17/Sep-17-Question/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/09/17/Sep-17-Question/" data-id="ck1rkku3f0001dbc1hdqspe82" class="article-share-link" data-share="baidu" data-title="Sep 17 Question">Share</a>
+        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/09/17/Sep-17-Question/" data-id="ck1rknj710003u1c1j2yiecj7" class="article-share-link" data-share="baidu" data-title="Sep 17 Question">Share</a>
       
 
       
