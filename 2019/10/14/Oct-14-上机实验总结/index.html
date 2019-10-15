@@ -6,18 +6,18 @@
   
   <title>Oct 14 上机实验总结 | 程序设计 Q&amp;A</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="常见错误总结由于这次的实验是以验证性的任务为主，所以问题也不是很大。但是细节上还是有很多需要注意的地方。  运算的优先级问题。许多同学（超过 5 人）弄不清||和&amp;amp;&amp;amp;的优先级。  关于编程细节问题，有一个任务是求一个分式的数值。求解分式的时候，自然需要考虑是不是分母为 0。  关于短路问题。 这次我这一组的同学我基本上都考了一个额外的问题： 12345a = 3;b = 4;">
+  <meta name="description" content="常见错误总结">
 <meta name="keywords" content="Lab">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Oct 14 上机实验总结">
 <meta property="og:url" content="https://chivier.github.io/c-programming-ta-qa-web/2019/10/14/Oct-14-上机实验总结/index.html">
 <meta property="og:site_name" content="程序设计 Q&amp;A">
-<meta property="og:description" content="常见错误总结由于这次的实验是以验证性的任务为主，所以问题也不是很大。但是细节上还是有很多需要注意的地方。  运算的优先级问题。许多同学（超过 5 人）弄不清||和&amp;amp;&amp;amp;的优先级。  关于编程细节问题，有一个任务是求一个分式的数值。求解分式的时候，自然需要考虑是不是分母为 0。  关于短路问题。 这次我这一组的同学我基本上都考了一个额外的问题： 12345a = 3;b = 4;">
+<meta property="og:description" content="常见错误总结">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-15T08:15:23.016Z">
+<meta property="og:updated_time" content="2019-10-15T08:32:54.528Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oct 14 上机实验总结">
-<meta name="twitter:description" content="常见错误总结由于这次的实验是以验证性的任务为主，所以问题也不是很大。但是细节上还是有很多需要注意的地方。  运算的优先级问题。许多同学（超过 5 人）弄不清||和&amp;amp;&amp;amp;的优先级。  关于编程细节问题，有一个任务是求一个分式的数值。求解分式的时候，自然需要考虑是不是分母为 0。  关于短路问题。 这次我这一组的同学我基本上都考了一个额外的问题： 12345a = 3;b = 4;">
+<meta name="twitter:description" content="常见错误总结">
   
     <link rel="alternative" href="https://github.com/Chivier" title="程序设计 Q&amp;A" type="application/atom+xml">
   
@@ -91,25 +91,71 @@
       
       <!-- Table of Contents -->
       
-         <a id="more"></a>
+        <h1 id="常见错误总结"><a href="#常见错误总结" class="headerlink" title="常见错误总结"></a>常见错误总结</h1> <a id="more"></a>
 
-<h1 id="常见错误总结"><a href="#常见错误总结" class="headerlink" title="常见错误总结"></a>常见错误总结</h1><p>由于这次的实验是以验证性的任务为主，所以问题也不是很大。但是细节上还是有很多需要注意的地方。</p>
+<p>这次实验题目大家检查得非常顺利，简单提一下几个常见的小问题：</p>
 <ol>
-<li><p>运算的优先级问题。许多同学（超过 5 人）弄不清<code>||</code>和<code>&amp;&amp;</code>的优先级。</p>
-</li>
-<li><p>关于编程细节问题，有一个任务是求一个分式的数值。求解分式的时候，自然需要考虑是不是分母为 0。</p>
-</li>
-<li><p>关于短路问题。</p>
-<p>这次我这一组的同学我基本上都考了一个额外的问题：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">3</span>;</span><br><span class="line">b = <span class="number">4</span>;</span><br><span class="line">c = <span class="number">5</span>;</span><br><span class="line">x = y = <span class="number">1</span>;</span><br><span class="line">c = !(x = a) &amp;&amp; (y = b) &amp;&amp; <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-
-<p>执行完之后 x，y 的值分别为多少。</p>
-<p>这个问题约有 2%的同学清楚短路性质，30%的同学上课认真听讲，也可以独立思考完成。（20%的同学借助其他同学的帮助，透彻理解了）</p>
-<p><code>&amp;&amp;</code>，<code>||</code>这类逻辑运算符有这样的特性，如果<code>&amp;&amp;</code>左部为 0，则右部会不做处理，直接无视，该部分式子值为 0。<code>||</code>同理。</p>
-<p>也就是说，实际上，我们的程序只执行了<code>!(x=a)</code>这一部分。</p>
-</li>
+<li>少用cout，cout有精度损失问题，会用<code>C++</code>的同学你们要是很有信心的话就自己写一个无精度损失的流输出系统。</li>
+<li><code>if</code>之后的语句如果有多句话的话一定一定要用大括号扩住。</li>
+<li><code>0&lt;x&lt;10</code>这句话不能直接写进程序，要写成<code>0&lt;x &amp;&amp; x&lt;10</code></li>
 </ol>
-<h1 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h1><p>吐槽 1： 个人认为，没有打 ACM 比赛的同学不要每天刷 OJ 啦，真的对于自己编程没有太大帮助。反而会让人变懒变瘤。就是代码写的又短又臭。因为 ACM 赛制讲究快速完成算法设计和编程，所以……大家都懂的，什么 20 行线段树，什么 getchar 快读，还有各种毒瘤倍增和不加注释的 DP。总之代码可以用不可理喻来形容，对于个人习惯培养没有任何好处。相反，多读一读经典代码，对自己帮助特别大。</p>
+<h1 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h1><p>这里看同学们闲的很没事干，这里给两个可以提前进行选择的大作业，下周一开工，想选择的同学们要提前学习以下内容：</p>
+<ul>
+<li><p><code>git</code>的使用方法</p>
+<p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496" target="_blank" rel="noopener">git教程</a></p>
+</li>
+<li><p>Markdown的基本使用</p>
+</li>
+</ul>
+<p>下面给出两个课题：</p>
+<h2 id="高性能线性代数算法库"><a href="#高性能线性代数算法库" class="headerlink" title="高性能线性代数算法库"></a>高性能线性代数算法库</h2><p>组长：黄业琦</p>
+<p>组员：待定（预计3～4人）</p>
+<p>目标:</p>
+<ul>
+<li>使同学掌握C编程技巧,掌握MPI,OPENMP等多线程并行编程方法</li>
+<li>增强同学对git, gdb等开发工具的掌握</li>
+<li>增强同学线性代数知识水平和文献阅读能力</li>
+</ul>
+<p>项目内容:</p>
+<ul>
+<li><p>基本的矩阵计算,包含但不仅限于:</p>
+<p>矩阵的加乘</p>
+<p>行列式的求值</p>
+<p>矩阵求秩、逆</p>
+<p>LU分解</p>
+</li>
+<li><p>对于CG（Conjugate Gradient）算法的实现</p>
+</li>
+<li><p>对于CG算法变种和优化的实现：如PCG、CAPCG</p>
+</li>
+<li><p>加入Ste||ar项目组，为该项目贡献代码</p>
+</li>
+<li><p>项目地址：<a href="http://stellar-group.org/research/" target="_blank" rel="noopener">Ste||ar</a></p>
+</li>
+</ul>
+<h2 id="PDF-Management-CLI项目"><a href="#PDF-Management-CLI项目" class="headerlink" title="PDF-Management CLI项目"></a>PDF-Management CLI项目</h2><p>第一组组长：黄业琦</p>
+<p>组员：待定（预计2～4人）</p>
+<p>第二组组长：黄业琦</p>
+<p>组员：待定（预计2～4人）</p>
+<p>目标：</p>
+<ul>
+<li>使同学们掌握从设计项目到开发项目的完整流程</li>
+<li>熟练掌握C语言，掌握简单的开发方法</li>
+<li>（如果条件允许，将带同学们做一个图形化界面）</li>
+</ul>
+<p>项目内容：</p>
+<ul>
+<li>实现对于PDF文档的标记类别和标记标签</li>
+<li>实现分类别列表</li>
+<li>实现标签查询</li>
+<li>实现模糊书名查询</li>
+<li>实现pdf文档的星标功能</li>
+<li>实现pdf文档的阅读进度记录功能</li>
+<li>记录pdf文件目录，实现工作区的设计（将某些书选中，复制到特定目录，方便快捷的进行工作）</li>
+<li>书籍列表导出功能</li>
+<li>实现（在读、已读完、未读、无标记）分类</li>
+<li>记录每次工作区的工作内容（阅读时间和内容的记录）</li>
+</ul>
 <p>吐槽 2： （IOCCC 也是经典代码，但是千万别看）</p>
 <p>吐槽 3： （克制不住好奇心看了，也别学，你们学不来的；学来了也会坏事）</p>
 <p>总体来说，第三组的同学们进步非常明显！我感觉非常快乐（隔壁组赵助教都累成狗了，我还有时间来围观你们打游戏）～～</p>
@@ -118,7 +164,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/10/14/Oct-14-上机实验总结/" data-id="ck1rknj6w0001u1c1w0ymjf72" class="article-share-link" data-share="baidu" data-title="Oct 14 上机实验总结">Share</a>
+        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/10/14/Oct-14-上机实验总结/" data-id="ck1rla4i50001tnc1wkhk5chw" class="article-share-link" data-share="baidu" data-title="Oct 14 上机实验总结">Share</a>
       
 
       
@@ -133,9 +179,9 @@
 <nav id="article-nav">
   
   
-    <a href="/c-programming-ta-qa-web/2019/10/02/Oct-1-Question/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/c-programming-ta-qa-web/2019/10/12/Oct-12-上机实验总结/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Oct 1 Question</div>
+      <div class="article-nav-title">Oct 12 上机实验总结</div>
     </a>
   
 </nav>
@@ -153,7 +199,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/c-programming-ta-qa-web/tags/For-loop/">For-loop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/c-programming-ta-qa-web/tags/Lab/">Lab</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/c-programming-ta-qa-web/tags/sizeof-date-type/">sizeof date type</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/c-programming-ta-qa-web/tags/For-loop/">For-loop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/c-programming-ta-qa-web/tags/Lab/">Lab</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/c-programming-ta-qa-web/tags/sizeof-date-type/">sizeof date type</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -162,7 +208,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/c-programming-ta-qa-web/archives/2019/10/">October 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/c-programming-ta-qa-web/archives/2019/09/">September 2019</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/c-programming-ta-qa-web/archives/2019/10/">October 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/c-programming-ta-qa-web/archives/2019/09/">September 2019</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -175,6 +221,10 @@
         
           <li>
             <a href="/c-programming-ta-qa-web/2019/10/14/Oct-14-上机实验总结/">Oct 14 上机实验总结</a>
+          </li>
+        
+          <li>
+            <a href="/c-programming-ta-qa-web/2019/10/12/Oct-12-上机实验总结/">Oct 12 上机实验总结</a>
           </li>
         
           <li>
