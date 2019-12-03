@@ -64,6 +64,69 @@
     <div class="outer">
       <section id="main">
   
+    <article id="post-printf-Advance" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/c-programming-ta-qa-web/2019/12/03/printf-Advance/" class="article-date">
+  <time datetime="2019-12-03T03:50:29.000Z" itemprop="datePublished">2019-12-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/c-programming-ta-qa-web/2019/12/03/printf-Advance/">printf Advance</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      <!-- Table of Contents -->
+      
+        <h1 id="关于百度的使用教程"><a href="#关于百度的使用教程" class="headerlink" title="关于百度的使用教程"></a>关于百度的使用教程</h1><p>同学们问问题之前请使用<font color="#90022" size="100"><strong>百度</strong></font></p>
+<p>使用教程：</p>
+<ol>
+<li>打开百度 网址是 <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a></li>
+<li>点击搜索框</li>
+<li>输入“printf 打印宽度制”</li>
+<li>点击第一个搜索结果</li>
+<li>我已经帮你们搜好了，网址是<a href="https://blog.csdn.net/yss28/article/details/53538063" target="_blank" rel="noopener">https://blog.csdn.net/yss28/article/details/53538063</a></li>
+</ol>
+<h1 id="关于printf的使用教程"><a href="#关于printf的使用教程" class="headerlink" title="关于printf的使用教程"></a>关于printf的使用教程</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%.*d\n"</span>, <span class="number">4</span>, s);</span><br></pre></td></tr></table></figure>
+
+<p>就等价于</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%4d\n"</span>,s);</span><br></pre></td></tr></table></figure>
+
+<h1 id="对于printf参数的理解"><a href="#对于printf参数的理解" class="headerlink" title="对于printf参数的理解"></a>对于<code>printf</code>参数的理解</h1><p>由于printf是一个<strong>函数</strong>，里面的所有东西都是参数，是可以变化调整的</p>
+<p>第一个参数是一个<strong>字符串</strong></p>
+<p>例子：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXL 1000</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> part1[MAXL] = <span class="string">"number = %"</span>;</span><br><span class="line">    <span class="keyword">char</span> part2[MAXL] = <span class="string">"4"</span>;</span><br><span class="line">    <span class="keyword">char</span> part3[MAXL] = <span class="string">"d\n"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">char</span> control[MAXL] = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">strcat</span>(control, part1);</span><br><span class="line">    <span class="built_in">strcat</span>(control, part2);</span><br><span class="line">    <span class="built_in">strcat</span>(control, part3);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> number = <span class="number">12</span>;</span><br><span class="line">    <span class="built_in">printf</span>(control, number);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/12/03/printf-Advance/" data-id="ck3pc3xqu000b7jc1t2ld8gmx" class="article-share-link" data-share="baidu" data-title="printf Advance">Share</a>
+      
+
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/c-programming-ta-qa-web/tags/printf/">printf</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Nov-25-上机实验总结" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/c-programming-ta-qa-web/2019/11/26/Nov-25-上机实验总结/" class="article-date">
@@ -93,7 +156,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/11/26/Nov-25-上机实验总结/" data-id="ck3fa9wn30002t6c10y2r7cyz" class="article-share-link" data-share="baidu" data-title="Nov 25 上机实验总结">Share</a>
+        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/11/26/Nov-25-上机实验总结/" data-id="ck3pc3xqf00017jc16piviwbo" class="article-share-link" data-share="baidu" data-title="Nov 25 上机实验总结">Share</a>
       
 
       
@@ -138,7 +201,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/11/18/Nov-18-上机实验总结/" data-id="ck3fa9wn10001t6c1csr1s02j" class="article-share-link" data-share="baidu" data-title="Nov 18 上机实验总结">Share</a>
+        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/11/18/Nov-18-上机实验总结/" data-id="ck3pc3xqk00037jc1ulg1en6p" class="article-share-link" data-share="baidu" data-title="Nov 18 上机实验总结">Share</a>
       
 
       
@@ -183,7 +246,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/11/11/Nov-11-上机实验总结/" data-id="ck3fa9wmx0000t6c19ehip308" class="article-share-link" data-share="baidu" data-title="Nov 11 上机实验总结">Share</a>
+        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/11/11/Nov-11-上机实验总结/" data-id="ck3pc3xqa00007jc1wa58ef2i" class="article-share-link" data-share="baidu" data-title="Nov 11 上机实验总结">Share</a>
       
 
       
@@ -228,7 +291,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/10/23/Oct-21-上机实验总结/" data-id="ck3fa9wng0007t6c1f3gyh2e6" class="article-share-link" data-share="baidu" data-title="Oct 21 上机实验总结">Share</a>
+        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/10/23/Oct-21-上机实验总结/" data-id="ck3pc3xqs000a7jc1pxqdgdtk" class="article-share-link" data-share="baidu" data-title="Oct 21 上机实验总结">Share</a>
       
 
       
@@ -275,7 +338,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/10/14/Oct-14-上机实验总结/" data-id="ck3fa9wne0006t6c1virx3c29" class="article-share-link" data-share="baidu" data-title="Oct 14 上机实验总结">Share</a>
+        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/10/14/Oct-14-上机实验总结/" data-id="ck3pc3xqq00077jc16wsej5ll" class="article-share-link" data-share="baidu" data-title="Oct 14 上机实验总结">Share</a>
       
 
       
@@ -322,7 +385,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/10/12/Oct-12-上机实验总结/" data-id="ck3fa9wn40003t6c1zjjkhbsx" class="article-share-link" data-share="baidu" data-title="Oct 12 上机实验总结">Share</a>
+        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/10/12/Oct-12-上机实验总结/" data-id="ck3pc3xqn00057jc1goi7k314" class="article-share-link" data-share="baidu" data-title="Oct 12 上机实验总结">Share</a>
       
 
       
@@ -369,7 +432,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/10/02/Oct-1-Question/" data-id="ck3fa9wn50004t6c1nya7hfs0" class="article-share-link" data-share="baidu" data-title="Oct 1 Question">Share</a>
+        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/10/02/Oct-1-Question/" data-id="ck3pc3xqi00027jc16q0h34qx" class="article-share-link" data-share="baidu" data-title="Oct 1 Question">Share</a>
       
 
       
@@ -416,7 +479,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/09/23/Sep-23-上机实验总结/" data-id="ck3fa9wnl000bt6c18plc6mdt" class="article-share-link" data-share="baidu" data-title="Sep 23 上机实验总结">Share</a>
+        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/09/23/Sep-23-上机实验总结/" data-id="ck3pc3xqw000e7jc1afmdlsrp" class="article-share-link" data-share="baidu" data-title="Sep 23 上机实验总结">Share</a>
       
 
       
@@ -463,7 +526,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/09/17/Sep-17-Question/" data-id="ck3fa9wni0008t6c10um8nba4" class="article-share-link" data-share="baidu" data-title="Sep 17 Question">Share</a>
+        <a data-url="https://chivier.github.io/c-programming-ta-qa-web/2019/09/17/Sep-17-Question/" data-id="ck3pc3xqp00067jc1hsh3uige" class="article-share-link" data-share="baidu" data-title="Sep 17 Question">Share</a>
       
 
       
@@ -489,7 +552,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/c-programming-ta-qa-web/tags/For-loop/">For-loop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/c-programming-ta-qa-web/tags/Lab/">Lab</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/c-programming-ta-qa-web/tags/sizeof-date-type/">sizeof date type</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/c-programming-ta-qa-web/tags/For-loop/">For-loop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/c-programming-ta-qa-web/tags/Lab/">Lab</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/c-programming-ta-qa-web/tags/printf/">printf</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/c-programming-ta-qa-web/tags/sizeof-date-type/">sizeof date type</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -498,7 +561,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/c-programming-ta-qa-web/archives/2019/11/">November 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/c-programming-ta-qa-web/archives/2019/10/">October 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/c-programming-ta-qa-web/archives/2019/09/">September 2019</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/c-programming-ta-qa-web/archives/2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/c-programming-ta-qa-web/archives/2019/11/">November 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/c-programming-ta-qa-web/archives/2019/10/">October 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/c-programming-ta-qa-web/archives/2019/09/">September 2019</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -508,6 +571,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/c-programming-ta-qa-web/2019/12/03/printf-Advance/">printf Advance</a>
+          </li>
         
           <li>
             <a href="/c-programming-ta-qa-web/2019/11/26/Nov-25-上机实验总结/">Nov 25 上机实验总结</a>
@@ -523,10 +590,6 @@
         
           <li>
             <a href="/c-programming-ta-qa-web/2019/10/23/Oct-21-上机实验总结/">Oct 21 上机实验总结</a>
-          </li>
-        
-          <li>
-            <a href="/c-programming-ta-qa-web/2019/10/14/Oct-14-上机实验总结/">Oct 14 上机实验总结</a>
           </li>
         
       </ul>
